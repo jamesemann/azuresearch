@@ -40,7 +40,7 @@
       "kind": "Storage",
       "name": "[concat(parameters('storageAccounts_searchblobs_name'), uniqueString(resourceGroup().id))]",
       "apiVersion": "2016-01-01",
-      "location": "northeurope",
+      "location": "North Europe",
       "tags": { },
       "properties": { },
       "resources": [ ],

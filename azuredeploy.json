@@ -4,11 +4,11 @@
   "parameters": {
     "searchService_name": {
       "defaultValue": "search",
-      "type": "String"
+      "type": "string"
     },
     "storageAccounts_searchblobs_name": {
       "defaultValue": "searchblobs",
-      "type": "String"
+      "type": "string"
     }
   },
   "variables": { },
@@ -25,7 +25,7 @@
       "properties": {
         "replicaCount": 1,
         "partitionCount": 1,
-        "hostingMode": "Default"
+        "hostingMode": "default"
       },
       "resources": [ ],
       "dependsOn": [ ]

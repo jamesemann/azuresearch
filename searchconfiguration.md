@@ -1,13 +1,27 @@
+POST https://<searchname>.search.windows.net/indexes?api-version=2015-02-28-Preview
+Content-Type: application/json
+api-key: <apikey>
+
+#Create index
+{
+ "name": "default",  
+ "fields": [
+  {"name": "id", "type": "Edm.String", "key": true, "searchable": false},
+  {"name": "businessname", "type": "Edm.String", "searchable": true, "filterable": true, "sortable": true, "facetable": true},
+ ]
+}
+
+
 #Register datasource
 
-POST https://srchkg44a424r354y.search.windows.net/datasources?api-version=2015-02-28-Preview
+POST https://<searchname>.search.windows.net/datasources?api-version=2015-02-28-Preview
 Content-Type: application/json
-api-key: 356FACCD51C32DE3D49336ADE3658F6F
+api-key: <apikey>
 
 {
     "name" : "blob-datasource",
     "type" : "azureblob",
-    "credentials" : { "connectionString" : "DefaultEndpointsProtocol=https;AccountName=blobskg44a424r354y;AccountKey=7pIX9zmYyd7QYzELhaFxxefDpuARL7jsn4HeVX3Sq850l0K7O2IQFiOBvjlUQOJsh8BudeymQvTlfO2xkCqjGw==" },
+    "credentials" : { "connectionString" : "DefaultEndpointsProtocol=https;AccountName=<blobname>;AccountKey=<blobaccountkey>" },
     "container" : { "name" : "allblobs" }
 }   
 
@@ -15,9 +29,9 @@ api-key: 356FACCD51C32DE3D49336ADE3658F6F
 
 #Then add indexers
 
-POST https://srchkg44a424r354y.search.windows.net/indexers?api-version=2015-02-28-Preview
+POST https://<searchname>.search.windows.net/indexers?api-version=2015-02-28-Preview
 Content-Type: application/json
-api-key: 356FACCD51C32DE3D49336ADE3658F6F
+api-key: <apikey>
 
 {
   "name" : "bob-json-indexer",

@@ -10,7 +10,7 @@ You will need 4 things for the subsequent REST calls, so gather these now from t
 - **blobname**: the name of your blob storage instance.   This will be the name you gave to blob storage in the ARM provisioning process, plus some unique characters.
 - **blobaccountkey**: the Azure Storage Access Key (either key1 or key2).
 
-2) Create a container in the blob storage account called "allblobs" (you can call it something different, but you'll have to change the REST calls to reflect it), and upload a sample file to it. I used a publicly available [food hygeine dataset](https://data.gov.uk/dataset/uk-food-hygiene-rating-data-yorkshire-and-humberside-food-standards-agency/resource/b290ee03-1405-4b90-ae63-2ae09d8c7791) from DATA.GOV.UK.  The data is available in XML format so I used a simple XML to JSON transformation.  I recommend using [Azure Storage Explorer](http://storageexplorer.com/) for uploading the file.
+2) Create a container in the blob storage account called "allblobs" (you can call it something different, but you'll have to change the REST calls to reflect it), and upload a sample file to it. I used a publicly available [food hygeine dataset](https://data.gov.uk/dataset/uk-food-hygiene-rating-data-yorkshire-and-humberside-food-standards-agency/resource/b290ee03-1405-4b90-ae63-2ae09d8c7791) from DATA.GOV.UK.  The data is available in XML format so I used a simple XML to JSON transformation - the converted file is available [here](https://github.com/jamesemann/azuresearch/blob/master/sampledata.json) if you want to use this.  I recommend using [Azure Storage Explorer](http://storageexplorer.com/) for uploading the file.
 
 3) Next, you need to create a search index.
 

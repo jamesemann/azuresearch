@@ -64,6 +64,9 @@ api-key: <apikey>
 
 ```
 
-6) Test!
+6) Test! You can use the Azure Portal to test.  The Search instance has a Search Explorer that you can use to type in a search and run the query - or you can query the REST endpoint directly.  Here I show test results being returned using Search Explorer:
+
+![alt text](search.png "Search Results")
+
 
 

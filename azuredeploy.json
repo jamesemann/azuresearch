@@ -17,7 +17,7 @@
       "comments": "",
       "type": "Microsoft.Search/searchServices",
       "sku": {
-        "name": "free"
+        "name": "basic"
       },
       "name": "[concat(parameters('searchService_name'), uniqueString(resourceGroup().id))]",
       "apiVersion": "2015-08-19",

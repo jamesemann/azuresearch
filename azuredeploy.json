@@ -3,11 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "searchService_name": {
-      "defaultValue": "search",
+      "defaultValue": "srch",
       "type": "string"
     },
     "storageAccounts_searchblobs_name": {
-      "defaultValue": "searchblobs",
+      "defaultValue": "blobs",
       "type": "string"
     }
   },

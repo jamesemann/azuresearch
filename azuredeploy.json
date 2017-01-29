@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "searchService_name": {
+      "defaultValue": "search",
+      "type": "String"
+    },
+    "storageAccounts_searchblobs_name": {
+      "defaultValue": "searchblobs",
+      "type": "String"
+    }
+  },
+  "variables": { },
+  "resources": [
+    {
+      "comments": "",
+      "type": "Microsoft.Search/searchServices",
+      "sku": {
+        "name": "free"
+      },
+      "name": "[parameters('searchService_name')]",
+      "apiVersion": "2015-08-19",
+      "location": "North Europe",
+      "properties": {
+        "replicaCount": 1,
+        "partitionCount": 1,
+        "hostingMode": "Default"
+      },
+      "resources": [ ],
+      "dependsOn": [ ]
+    },
+    {
+      "comments": "",
+      "type": "Microsoft.Storage/storageAccounts",
+      "sku": {
+        "name": "Standard_RAGRS",
+        "tier": "Standard"
+      },
+      "kind": "Storage",
+      "name": "[parameters('storageAccounts_searchblobs_name')]",
+      "apiVersion": "2016-01-01",
+      "location": "northeurope",
+      "tags": { },
+      "properties": { },
+      "resources": [ ],
+      "dependsOn": [ ]
+    }
+  ]
+}

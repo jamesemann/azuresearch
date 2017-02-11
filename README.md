@@ -23,7 +23,7 @@ api-key: <apikey>
  "name": "default",  
  "fields": [
   {"name": "id", "type": "Edm.String", "key": true, "searchable": false},
-  {"name": "businessname", "type": "Edm.String", "searchable": true, "filterable": true, "sortable": true, "facetable": true},
+  {"name": "businessname", "type": "Edm.String", "searchable": true, "filterable": true, "sortable": true, "facetable": true}
  ]
 }
 
